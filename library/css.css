@@ -18,27 +18,27 @@ body {
 
 @font-face {
     font-family: 'Gilroy';
-    src: url("../font/Gilroy-ExtraBold.otf") format("opentype");
+    src: url("../Gilroy-ExtraBold.otf") format("opentype");
 }
 
 @font-face {
     font-family: 'Acrom';
-    src: url("../font/Acrom-Bold.ttf") format("truetype");
+    src: url("../Acrom-Bold.ttf") format("truetype");
 }
 
 @font-face {
     font-family: 'TT Norms';
-    src: url("../font/TTNorms-Bold.ttf") format("truetype");
+    src: url("../TTNorms-Bold.ttf") format("truetype");
 }
 
 @font-face {
     font-family: 'Proxima Nova';
-    src: url("../font/ProximaNova-Regular.otf") format("opentype");
+    src: url("../ProximaNova-Regular.otf") format("opentype");
 }
 
 @font-face {
     font-family: 'pdown';
-    src: url('../font/pdown.ttf');
+    src: url('../pdown.ttf');
 }
 
 .car-hud {
