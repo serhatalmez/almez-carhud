@@ -1,0 +1,722 @@
+body {
+/*     background: url("../img/bg.png") no-repeat center center fixed; 
+    background-size: cover;  */
+    overflow: hidden; 
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+:root {
+    --box-shadow-color: 0px 1px 1px 0px rgba(50, 50, 50, 0.75);
+}
+
+.container {
+    display: none;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url("../font/Gilroy-ExtraBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'Acrom';
+    src: url("../font/Acrom-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: url("../font/TTNorms-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url("../font/ProximaNova-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'pdown';
+    src: url('../font/pdown.ttf');
+}
+
+.car-hud {
+    position: absolute;
+    right: 3vh;
+    bottom: 3vh;
+    display: none;
+}
+
+/* voice */
+.voice {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    right: 3vh;
+    bottom: 2vh;
+}
+
+.voice-elipse {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border-radius: 50vh;
+    right: 2px;
+    top: -8px;
+    z-index: 1;
+    font-family: TT Norms;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    color: #98A5C5;
+    box-shadow: var(--box-shadow-color);
+}
+
+.voice-elipse-2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50vh;
+    width: 50px;
+    height: 50px;
+    background: #30475e;
+    box-shadow: var(--box-shadow-color);
+}
+
+.circle-ripple {
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: ripple 0.7s linear infinite;
+}
+  
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 rgb(48 71 94 / 30%),
+                    0 0 0 3px rgb(48 71 94 / 30%),
+                    0 0 0 8px rgb(48 71 94 / 30%);
+    }
+    100% {
+        box-shadow: 0 0 0 3px rgb(48 71 94 / 30%),
+                    0 0 0 8px rgb(48 71 94 / 30%),
+                    0 0 0 16px rgb(48 71 94 / 0%);
+    }
+}
+
+.voice-microphe-icon-1 {
+    position: absolute;
+    width: 13.09px;
+    height: 18px;
+}
+
+.voice-microphe-icon-2 {
+    position: absolute;
+    width: 25.45px;
+    height: 35px;
+}
+
+/* speed motter*/
+.speed-motter {
+    position: relative;
+    width: 259.21px;
+    height: 218.15px;
+}
+
+.speed-motter-rectangle {
+    z-index: 3;
+    position: absolute;
+}
+
+.speed-motter-rectangle-2 {
+    z-index: 3;
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+}
+
+.speed-motter-elipse { 
+    z-index: 2;
+    position: absolute;
+    left: 4px;
+    top: 1px;
+}
+
+.speed-motter-elipse-2 { 
+    z-index: 2;
+    position: absolute;
+    left: -41px;
+    top: -44px;
+}
+
+.speed-motter-elipse-shadow {
+    z-index: 1;
+    position: absolute;  
+    left: 1px;
+    top: -5px;
+}
+
+.speed-motter-elipse-shadow-2 {
+    z-index: 1;
+    position: absolute;  
+    right: 0px;
+    bottom: 8px;
+    filter: blur(6px);
+}
+
+/* speed motter text */
+.speed-motter-text {
+    font-family: TT Norms;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    position: absolute;
+    left: 25px;
+    bottom: 15px;
+}
+
+.speed-motter-text-1 {
+    position: absolute;
+    color: #30475e;
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.1);
+    left: 25px;
+    bottom: 1px;
+}
+
+.speed-motter-text-2 {
+    position: absolute;
+    color: #30475e;
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.1);
+    left: 5px;
+    bottom: 40px;
+}
+
+.speed-motter-text-3 {
+    position: absolute;
+    color: rgba(255, 255, 255, 1);
+    left: 0px;
+    bottom: 88px;
+}
+
+.speed-motter-text-4 {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.65);
+    left: 19px;
+    bottom: 129px;
+}
+
+.speed-motter-text-5 {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.65);
+    left: 52px;
+    bottom: 159px;
+}
+
+.speed-motter-text-6 {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.65);
+    left: 91px;
+    bottom: 168px;
+}
+
+.speed-motter-text-7 {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.65);
+    left: 138px;
+    bottom: 159px;
+}
+
+.speed-motter-text-8 {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.65);
+    left: 173px;
+    bottom: 129px;
+}
+
+.speed-motter-text-9 {
+    position: absolute;
+    color: rgba(255, 255, 255, 1);
+    left: 194px;
+    bottom: 86px;
+}
+
+.speed-motter-text-10 {
+    position: absolute;
+    color: rgba(255, 255, 255, 1);
+    left: 189px;
+    bottom: 40px;
+}
+
+.speed-motter-text-11 {
+    position: absolute;
+    color: rgba(255, 255, 255, 1);
+    left: 164px;
+    bottom: 1px;
+}
+
+/* speed motter kmh */
+.kmh-number {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 259.21px;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 85px;
+    line-height: 103px;
+    background: -webkit-linear-gradient(270deg, #FFFFFF 22.73%, rgba(255, 255, 255, 0) 78.51%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    top: 60px;
+    z-index: 2;
+}
+
+.kmh {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    font-family: Acrom;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+    top: 125px;
+    width: 259.21px;
+    z-index: 3;
+}
+
+.strela {
+    position: absolute;
+    left: 54px;
+    bottom: 20px;
+    z-index: 1;
+    transform: rotate(0deg);
+}
+
+/* car icons */
+.car-icons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 25%;
+    width: 81px;
+    bottom: 6px;
+    right: 87px;
+    position: absolute;
+}
+
+.car-icons svg {
+    padding: 3px;
+}
+
+.car-icons-icon {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.car-icons-blur {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    filter: blur(15px);
+    background: #FFFFFF;
+    display: none;
+}
+
+/* fuel bar */
+.fuel-bars {
+    position: absolute;
+    left: 80px;
+    bottom: 5px;
+}
+
+.fuel-bar-blur {
+    background: #ffffff;
+    filter: blur(15px);
+    width: 90px;
+    height: 13px;
+    position: absolute;
+    opacity: 0.2;
+}
+
+.fuel-bar {
+    position: absolute;
+    left: 15px;
+    top: 5px;
+    background: rgb(255 255 255 / 10%);
+    width: 70px;
+    height: 6px;
+    border-radius: 50vh;
+}
+
+.fuel-bar-inside {
+    position: relative;
+    background: linear-gradient(180.69deg, #55BC72  91.89%, #005046 6.08%);
+    height: 100%;
+    width: 5px;
+    border-radius: 50vh;
+    transition: width 1s;
+}
+
+.fuel-bar-icon {
+    position: absolute;
+}
+
+#beltColor path {
+    fill: white;
+}
+
+#engineColor path {
+    fill: white;
+}
+
+/* street Text */
+.street-text {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.1vh;
+    color: #FFFFFF;
+    position: absolute;
+    left: 1.8vh;
+    bottom: 6vh;
+    min-width: 253px;
+}
+
+.street-text-main {
+    min-width: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.street-text-compass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: #30475e;
+    height: 3vh;
+    width: 3vh;
+    border-radius: 3px;
+    box-shadow: var(--box-shadow-color);
+}
+
+.street-text-text {
+    padding: 0 20px 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 1px 1px 1px rgb(1 1 1);
+    font-size: 1.3vh;
+}
+
+/* minimap */
+.mapoutline {
+    position: fixed;
+    bottom: 5vh;
+    left: 5.8vh;
+    overflow: hidden;
+    width: 29.629vh;
+    display: none;
+}
+
+.mapborder {
+    width: 26.851vh;
+    height: 26.851vh;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    /*box-shadow: 0px 0px 16px rgba(0,0,0,0.5);*/
+    position: relative;
+    top: 20px;
+    display: inline-block;
+}
+
+/* Status Hud */
+
+.status-hud {
+    display: none;
+    position: absolute;
+    bottom: 2vh;
+    left: 1.8vh;
+    width: 32vh;
+}
+
+.car-status-hud {
+    opacity: 0.0;
+    display: none;
+    position: absolute;
+    bottom: 5.5vh;
+    left: 7.8vh;
+    width: 25.5vh;
+}
+
+.status-bar, .car-status-bar {
+    position: relative;
+    background: rgba(17, 17, 17, 0.5);
+    width: 100%;
+    height: 3vh;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    box-shadow: var(--box-shadow-color);
+}
+
+.car-water-bar {
+    margin-right: 0;
+}
+
+.car-status-bar {
+    height: 0.45vh;
+    border-radius: 1px;
+}
+
+.status-bar svg {
+    position: absolute;
+    color: #fff;
+    z-index: 1;
+    padding: 0 1vh;
+    font-size: 1.4vh;
+}
+
+.status-bar-bg {
+    background: #30475e;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    border-radius: 2px;
+    left: 0;
+}
+
+#hunger-bar {
+    width: 83.15px;
+    justify-content: center;
+}
+
+#water-bar {
+    width: 83.15px;
+    justify-content: center;
+}
+
+#oxy-bar {
+    width: 83.15px;
+    justify-content: center;
+}
+
+#stamina-bar {
+    width: 83.15px;
+    justify-content: center;
+}
+
+#heal {
+    background: #31a372;
+}
+
+#zirh {
+    background: #3989ff;
+}
+
+#yemek, #car-yemek {
+    background: #d5993d;
+}
+
+#su, #car-su {
+    background: #4a79af;
+}
+
+#stamina {
+    background: #485a78;
+}
+
+#oxy {
+    background: #800;
+}
+
+/* Money */
+.money-cash {
+    opacity: 0.0;
+    position: absolute;
+    right: 5vw;
+    top: 7vh;
+    font-family: 'pdown';
+    font-weight: 400;
+    font-size: 29px;
+    padding: 4px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    margin-right: 6px;
+    margin-top: 6px;
+}
+
+.money-cash p {
+    padding: 5px 0;
+    margin: 0;
+}
+
+.munnie {
+    color: #277418;
+}
+
+#cash, #addCashValue {
+    color: white;
+}
+
+#addCash {
+    opacity: 0.0;
+}
+
+/* Hud MenÃ¼ */
+.hud-menu-container {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    z-index: 9999;
+}
+
+.hud-menu {
+    width: 300px;
+    height: 400px;
+    background: #484848;
+}
+
+.hud-menu-header {
+    background: #212121;
+    display: flex;
+    height: 45px;
+    color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.hud-menu-header-text {
+    font-weight: bold;
+}
+
+.hud-menu-header-close {
+    font-size: 25px;
+}
+
+.hud-menu-header-close:hover {
+    color: rgb(214, 0, 0);
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+  
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #bbbbbb;
+    box-shadow: inset 0 1px 3px rgb(0 0 0 / 22%);
+    border-radius: 1px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 22%);
+    border-radius: 1px;
+}
+  
+input:checked + .slider {
+    background-color: #629749;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #629749;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.hud-menu-content {
+    padding: 5px 10px;
+}
+
+.hud-menu-content-setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hud-menu-content-setting-text {
+    color: #fff;
+    font-weight: 400;
+}
+
+/* black bar */
+.blackbar-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+.blackbar-bar {
+    width: 100%;
+    height: 10vh;
+    background: #000;
+}
+
+/* salty UyarÄ± */
+.salty-error {
+    display: none;
+    background: rgb(51 51 51 / 50%);
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 25px;
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, 0);
+    text-shadow: 1px 1px #000;
+}
