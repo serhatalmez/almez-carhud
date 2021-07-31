@@ -1,5 +1,5 @@
 body {
-/*     background: url("../img/bg.png") no-repeat center center fixed; 
+/*     background: url("../library/img/bg.png") no-repeat center center fixed; 
     background-size: cover;  */
     overflow: hidden; 
     padding: 0;
@@ -18,27 +18,27 @@ body {
 
 @font-face {
     font-family: 'Gilroy';
-    src: url("../Gilroy-ExtraBold.otf") format("opentype");
+    src: url("../library/Gilroy.otf") format("opentype");
 }
 
 @font-face {
     font-family: 'Acrom';
-    src: url("../Acrom-Bold.ttf") format("truetype");
+    src: url("../library/Acrom-Bold.ttf") format("truetype");
 }
 
 @font-face {
     font-family: 'TT Norms';
-    src: url("../TTNorms-Bold.ttf") format("truetype");
+    src: url("../library/TTNorms-Bold.ttf") format("truetype");
 }
 
 @font-face {
     font-family: 'Proxima Nova';
-    src: url("../ProximaNova-Regular.otf") format("opentype");
+    src: url("../library/ProximaNova-Regular.otf") format("opentype");
 }
 
 @font-face {
     font-family: 'pdown';
-    src: url('../pdown.ttf');
+    src: url('../library/pdown.ttf');
 }
 
 .car-hud {
